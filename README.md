@@ -18,3 +18,6 @@ I refuse to pay $99 for an apple developer license, so you can sideload it... :3
 
 **For Linux:**
 1. Borrow your friend's macbook or windows computer 
+
+# What's next 
+If you etransfer $100 to roachc006@gmail.com, I will put this on the app store!
