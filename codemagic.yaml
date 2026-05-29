@@ -1,0 +1,40 @@
+workflows:
+  ios-build:
+    name: flashbak iOS Build
+    max_build_duration: 30
+    environment:
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Install XcodeGen
+        script: brew install xcodegen
+
+      - name: Generate Xcode project
+        script: xcodegen generate
+
+      - name: Build (no code signing — for local install)
+        script: |
+          xcodebuild \
+            -project flashbak.xcodeproj \
+            -scheme flashbak \
+            -configuration Release \
+            -destination generic/platform=iOS \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            CONFIGURATION_BUILD_DIR=build \
+            build
+
+      - name: Package IPA
+        script: |
+          mkdir -p Payload
+          cp -r build/flashbak.app Payload/
+          zip -r flashbak.ipa Payload
+          rm -rf Payload
+
+    artifacts:
+      - flashbak.ipa
+
+    # Uncomment below + add certs if you have an Apple Developer account ($99/yr)
+    # signing:
+    #   distribution_type: ad_hoc
