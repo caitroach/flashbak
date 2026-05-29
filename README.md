@@ -5,6 +5,7 @@ ohyeahbaby we aare so back
 
 # super janky installation instructions
 I refuse to pay $99 for an apple developer license, so you can sideload it... :3
+
 **For macOS or windows:**
 1. Install AltServer from https://altstore.io/
 2. Turn on "developer mode" in iphone settings
