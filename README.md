@@ -21,3 +21,6 @@ I refuse to pay $99 for an apple developer license, so you can sideload it... :3
 
 # What's next 
 If you etransfer $100 to roachc006@gmail.com, I will put this on the app store!
+
+# How to contribute 
+PLEASE DO!! I HATE SWIFT!! Fork this repo and submit a pull request.
